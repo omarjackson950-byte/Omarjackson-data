@@ -1,0 +1,62 @@
+{
+  "name": "nuggets-memory-pro",
+  "version": "1.0.0",
+  "description": "Freemium AI memory plugin built on HRR (Holographic Reduced Representation). Free local memory + Pro cloud sync, Stripe billing, determinism guardrails, and team sharing.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "nuggets-memory-pro": "dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "dev": "ts-node src/mcp/server.ts",
+    "cli": "ts-node src/cli/index.ts",
+    "start": "node dist/mcp/server.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "memory",
+    "hrr",
+    "holographic",
+    "ai",
+    "claude",
+    "llm",
+    "nuggets",
+    "plugin"
+  ],
+  "author": "Omar Jackson",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/omarjackson950-byte/omarjackson-data.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    ".mcp.json"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "conf": "^13.0.0",
+    "dotenv": "^16.4.5",
+    "inquirer": "^10.2.2",
+    "node-fetch": "^3.3.2",
+    "open": "^10.1.0",
+    "ora": "^8.1.1",
+    "stripe": "^16.6.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}

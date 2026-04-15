@@ -1,0 +1,16 @@
+{
+  "$schema": "https://modelcontextprotocol.io/mcp.schema.json",
+  "mcpServers": {
+    "nuggets-memory-pro": {
+      "command": "node",
+      "args": ["dist/mcp/server.js"],
+      "env": {
+        "NUGGETS_STORE_PATH": "${HOME}/.nuggets-memory-pro/store.json",
+        "NUGGETS_AUDIT_PATH": "${HOME}/.nuggets-memory-pro/audit.ndjson",
+        "NUGGETS_NUDGE_PATH": "${HOME}/.nuggets-memory-pro/nudge.json",
+        "NUGGETS_CONFIG_DIR": "${HOME}/.nuggets-memory-pro"
+      },
+      "description": "HRR-powered persistent memory for AI agents. Free local memory + Pro cloud sync, audit logs, and nudge scheduling."
+    }
+  }
+}
